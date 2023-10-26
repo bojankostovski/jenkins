@@ -2,7 +2,7 @@ node {
     stage "Create build output"
     
     // Make the output directory.
-    sh "touch /home/bojan/DEVjenkinstest.bks"
+    sh "touch /tmp/DEVjenkinstest.bks"
 }
 
 
