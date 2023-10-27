@@ -1,29 +1,29 @@
 
 //node {
-//    stage "Create build output"
+//    stage 'Create build output'
     
     // Make the output directory.
-//    sh "touch /tmp/DEVjenkinstest.bks"
+//    sh 'touch /tmp/DEVjenkinstest.bks'
 //}
 
 
 node {
 
     stage('CREATE') {
-        sh "touch /tmp/DEVjenkinstest.bks"
-        sh "touch /tmp/DEVjenkinstest2.bks"
-        sh " echo files created"
+        sh 'touch /tmp/DEVjenkinstest.bks'
+        sh 'touch /tmp/DEVjenkinstest2.bks'
+        sh ' echo files created'
       }
     
     stage('EDIT') {
-        sh "chmod 777 /tmp/DEVjenkinstest2.bks"
-        sh "echo changed permissions"
+        sh 'chmod 777 /tmp/DEVjenkinstest2.bks'
+        sh 'echo changed permissions'
         }
 
     stage('INSERT') {
-        sh "echo test2>>/tmp/DEVjenkinstest2.bks"
-        sh "echo written in file"
-  //      sh "find /tmp/ -type f -name *.bks -exec rm -rf {} \;"
+        sh 'echo test2>>/tmp/DEVjenkinstest2.bks'
+        sh 'echo written in file'
+        sh 'find /tmp -type f -name "*.bks" -exec rm -rf {} \;'
         }
 
     }
