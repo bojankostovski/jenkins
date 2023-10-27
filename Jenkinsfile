@@ -7,9 +7,7 @@
 //}
 
 
-pipeline {
-
-  stages {
+node {
 
     stage('CREATE') {
       steps {
@@ -32,6 +30,5 @@ pipeline {
         sh "echo test>>/tmp/DEVjenkins2.bks"
         sh "echo written in file"
         }
-      }
       }
     }
