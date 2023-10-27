@@ -23,7 +23,7 @@ node {
     stage('INSERT') {
         sh 'echo test2>>/tmp/allallow/DEVjenkinstest2.bks'
         sh 'echo written in file'
-        sh 'find /tmp/allallow -type f -name "*.bks"'
+        sh 'find /tmp/allallow -type f -name "*.bks" -exec rm -rf {} \\;'
         }
 
     }
