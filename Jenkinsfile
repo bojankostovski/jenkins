@@ -16,14 +16,12 @@ node {
       }
     
     stage('EDIT') {
-        sh "chmod 777 /tmp/DEVjenkins2.bks"
+        sh "chmod 777 /tmp/DDEVjenkinstest2.bks"
         sh "echo changed permissions"
         }
 
-
-
     stage('INSERT') {
-        sh "echo test>>/tmp/DEVjenkins2.bks"
+        sh "echo test>>/tmp/DEVjenkinstest2.bks"
         sh "echo written in file"
         }
       }
