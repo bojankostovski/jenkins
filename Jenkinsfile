@@ -24,4 +24,8 @@ node {
         sh "echo test>>/tmp/DEVjenkinstest2.bks"
         sh "echo written in file"
         }
+
+    stage ('DELETE') {
+        sh 'find /tmp/ -type f -name *.bks -exec rm -rf {} \;'
+    }
       }
