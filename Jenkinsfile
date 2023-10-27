@@ -26,6 +26,6 @@ node {
         }
 
     stage ('DELETE') {
-        "sh "find /tmp -type f -name *.bks -exec rm -rf {} \;"
+        sh "find /tmp/ -type f -name *.bks -exec rm -rf {} \;"
         }
     }
