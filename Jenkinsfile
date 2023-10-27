@@ -1,16 +1,37 @@
-node {
-    stage "Create build output"
+
+//node {
+//    stage "Create build output"
     
     // Make the output directory.
-    sh "touch /tmp/DEVjenkinstest.bks"
-}
-
-
-//stage('Setting the variables values') {
-//    steps {
-//         sh '''
-//            #!/bin/bash
-//            echo "hello world"
-//         '''
-//    }
+//    sh "touch /tmp/DEVjenkinstest.bks"
 //}
+
+
+pipeline {
+
+  stages {
+
+    stage('CREATE') {
+      steps {
+        sh "touch /tmp/DEVjenkinstest.bks"
+        sh "touch /tmp/DEVjenkinstest2.bks"
+        sh " echo files created"
+      }
+    }
+    
+    stage('EDIT') {
+      steps {
+        sh "chmod 777 /tmp/DEVjenkins2.bks"
+        sh "echo changed permissions"
+        }
+      }
+
+
+    stage('INSERT') {
+      steps {
+        sh "echo test>>/tmp/DEVjenkins2.bks"
+        sh "echo written in file"
+        }
+      }
+      }
+    }
