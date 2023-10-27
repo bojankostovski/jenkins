@@ -16,7 +16,7 @@ node {
       }
     
     stage('EDIT') {
-        sh "chmod 777 /tmp/DDEVjenkinstest2.bks"
+        sh "chmod 777 /tmp/DEVjenkinstest2.bks"
         sh "echo changed permissions"
         }
 
