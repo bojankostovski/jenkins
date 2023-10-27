@@ -25,7 +25,7 @@ node {
         sh "echo written in file"
         }
 
-    stage ('DELETE') {
-        sh 'find /tmp/ -type f -name *.bks -exec rm -rf {} \;'
-        }
+//    stage ('DELETE') {
+//        sh "find /tmp/ -type f -name *.bks -exec rm -rf {} \;"
+//        }
     }
