@@ -14,7 +14,8 @@ node {
       }
     
     stage('EDIT') {
-        sh 'find /tmp/testforjenkins -type f -mtime +2 -exec rm -rf {} \\;'
+        sh 'rm $(find /tmp/testforjenkins -type f -mtime +2)'
+        //sh 'find /tmp/testforjenkins -type f -mtime +2 -exec rm -rf {} \\;'
         sh 'echo files older than 2 days deleted'
         }
 
