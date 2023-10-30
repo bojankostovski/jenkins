@@ -10,20 +10,17 @@
 node {
 
     stage('CREATE') {
-        sh 'touch /tmp/allallow/DEVjenkinstest.bks'
-        sh 'touch /tmp/allallow/DEVjenkinstest2.bks'
-        sh ' echo files created'
+        sh 'ls -l /tmp/testforjenkins'
+        sh ' echo files listed'
       }
     
     stage('EDIT') {
-        sh 'chmod 777 /tmp/allallow/DEVjenkinstest2.bks'
-        sh 'echo changed permissions'
+        sh 'find /tmp/testforjenkins/ -type f -mtime +2 -exec rm -rf {} \\;'
+        sh 'echo files older than 2 days deleted'
         }
 
     stage('INSERT') {
-        sh 'echo test2>>/tmp/allallow/DEVjenkinstest2.bks'
-        sh 'echo written in file'
-        sh 'find /tmp/allallow -type f -name "*.bks" -exec rm -rf {} \\;'
+        sh 'echo files older than 2 days deleted'
         }
 
     }
