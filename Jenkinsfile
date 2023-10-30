@@ -21,7 +21,9 @@ node {
         }
 
     stage('INSERT') {
-        sh 'echo files older than 2 days deleted'
+        sh 'cd /tmp/test/'
+        sh 'touch denes.txt'
+        sh 'pwd'
         }
 
     }
