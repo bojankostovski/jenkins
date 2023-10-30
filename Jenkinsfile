@@ -14,7 +14,7 @@ node {
       }
     
     stage('EDIT') {
-        sh 'mkdir /tmp/test/2023-001'
+        sh 'mkdir /tmp/test/2023-003'
         sh 'cd /tmp/test/ && rf -rf $(find ./ -type d -name "2023-*" -mmin +3)'
         //sh 'find /tmp/testforjenkins -type f -mtime +2 -exec rm -rf {} \\;'
         sh 'echo files older than 2 days deleted'
