@@ -24,7 +24,7 @@ node {
         sh 'ls -l && pwd'
         sh 'ls -l /tmp/test && pwd'
         sh 'cd /tmp/test && ls -l && pwd'
-        sh 'cd /tmp/test/ && ls -l $(find ./ -type d -name "2024-*" -mmin +3)'  '
+        sh 'cd /tmp/test/ && ls -l $(find ./ -type d -name "2024-*" -mmin +3)'
         }
 
     stage('INSERT') {
